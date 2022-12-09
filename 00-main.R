@@ -6,8 +6,12 @@ library(googlesheets4)
 library(tidyverse)
 library(extrafont)
 loadfonts()
+# fonts()
+# extrafont::font_import()
+# fonts()
 
 ## load data on Google
+googlesheets4::gs4_auth()
 dta <- googlesheets4::read_sheet(ss = "https://docs.google.com/spreadsheets/d/1FM6LKW7jj8tl14Al08UiJAYP3Asr7Yw1IVUmoxGOxd4")
 dta_lang <- googlesheets4::read_sheet(
   ss = "https://docs.google.com/spreadsheets/d/1FM6LKW7jj8tl14Al08UiJAYP3Asr7Yw1IVUmoxGOxd4", 
@@ -121,12 +125,14 @@ stat_fig <-
   scale_fill_manual(values = c("#DC3522", "#DC3522", "#DC3522")) +
   theme_void() +
   theme(axis.title = element_blank(),
-        axis.text.y = element_text(size = 15, family = "Roboto Medium"),
+        axis.text.y = element_text(size = 15),
         axis.text.x = element_blank(),
         legend.position = "none")
 
 
 ## publications
+## download .bib from Orcid
+
 # orcid_pub <- rorcid::works(orcid_id) %>%
 #   as_tibble() %>%
 #   janitor::clean_names() %>%
