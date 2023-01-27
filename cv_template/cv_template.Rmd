@@ -2,11 +2,11 @@
 name: Robby
 surname: De Pauw
 profilepic: robby_240.jpeg
-position: "Senior Researcher"
+position: "Senior Researcher, Statistican, Epidemiologist"
 address: ""
 phone: +32 (0) 499 61 59 72
 www: robbydepauw.be
-email: "RobbyDePauw@Sciensano.be"
+email: "robby@twrite.be"
 twitter: RobbyDePauw
 github: rdpauw
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -54,19 +54,22 @@ pro
 bibliography_entries("works.bib")
 ```
 
+\newpage
+
 # Projects
 
 ```{r}
 projects
 ```
 
-\newpage
 
 # Teaching
 
 ```{r}
 teach
 ```
+
+\newpage
 
 # Presentation (first author)
 
@@ -85,6 +88,15 @@ member
 ```{r}
 int_stays
 ```
+
+\newpage
+
+# Master theses
+
+```{r}
+master_theses
+```
+
 
 \newpage
 

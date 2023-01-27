@@ -19,6 +19,9 @@ dta_lang <- googlesheets4::read_sheet(
 dta_lang_2 <- googlesheets4::read_sheet(
   ss = "https://docs.google.com/spreadsheets/d/1FM6LKW7jj8tl14Al08UiJAYP3Asr7Yw1IVUmoxGOxd4", 
   sheet = 3)
+dta_master <- googlesheets4::read_sheet(
+  ss = "https://docs.google.com/spreadsheets/d/1FM6LKW7jj8tl14Al08UiJAYP3Asr7Yw1IVUmoxGOxd4", 
+  sheet = 4)
 
 ## orcid-ID
 orcid_id <- "0000-0002-4242-9062"
@@ -102,6 +105,14 @@ member <- dta %>%
 ## International stays
 int_stays <- dta %>%
   filter(id == "INT") %>%
+  brief_entries(
+    what = what,
+    when = when,
+    with = with
+  )
+
+## Master theses
+master_theses <- dta_master %>%
   brief_entries(
     what = what,
     when = when,
