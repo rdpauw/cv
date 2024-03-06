@@ -6,7 +6,7 @@ position: "Senior Researcher, Statistican, Epidemiologist"
 address: ""
 phone: +32 (0) 499 61 59 72
 www: robbydepauw.be
-email: "robby@twrite.be"
+email: "depauwrobby@gmail.com"
 twitter: RobbyDePauw
 github: rdpauw
 date: "`r format(Sys.time(), '%B %Y')`"
