@@ -75,6 +75,16 @@ projects <- dta %>%
     why = why
   )
 
+## PhDs
+phd <- dta %>%
+  filter(id == "PHD") %>%
+  detailed_entries(
+    with = what,
+    when = when,
+    what = with,
+    where = where
+  )
+
 ## teaching
 teach <- dta %>%
   filter(id == "TEACH") %>%
